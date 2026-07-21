@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { viteSingleFile } from 'vite-plugin-singlefile';
 import { viteStaticCopy } from 'vite-plugin-static-copy'; // 1. Импортируем копировщик
+import svg from '@poppanator/sveltekit-svg';
 
 export default defineConfig({
   // Задаем корень сборки фронтенда внутри src/ui [2.1]
@@ -9,6 +10,7 @@ export default defineConfig({
   
   plugins: [
     svelte(),
+    svg(),
     viteSingleFile(), // Сжимает HTML-файл целиком в монолит ui.html
     
     // 2. НАСТРАИВАЕМ АВТОМАТИЧЕСКОЕ КОПИРОВАНИЕ МАНИФЕСТА

@@ -1,4 +1,5 @@
 <script>
+import BorderRadius from './assets/icons/border-radius.svg'
   import { figma, initAutoResize } from './utils/index.js';
   import { Tabs, Tab, Toast, Modal } from './components/index.js';
   
@@ -33,7 +34,7 @@
   <Modal />
 
   <header class="status-bar">
-    Выбрано объектов в Figma: <strong>{selectedCount}</strong>
+    <BorderRadius style="--color-icon: red"/> Выбрано объектов в Figma: <strong>{selectedCount}</strong>
   </header>
 
   <!-- Многостраничный роутер на базе svelte-super и ваших сниппетов -->
